@@ -87,9 +87,9 @@ module.exports = yeoman.generators.Base.extend({
       copyTpl(file, scriptProps)
     });
 
-    // ['src/index.js', 'config.js', 'index.js', '.gitignore', '.babelrc'].forEach(function(file) {
-    //   copy(file);
-    // });
+    ['src/index.js', 'config.js', 'index.js', '.gitignore', '.babelrc'].forEach(function(file) {
+      copy(file);
+    });
 
   },
 
