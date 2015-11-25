@@ -1,5 +1,5 @@
 # generator-simple-lambda
- [![NPM version][npm-image]][npm-url]
+ [![npm version](https://badge.fury.io/js/generator-simple-lambda.svg)](https://badge.fury.io/js/generator-simple-lambda)
 > Generate aws lambda function 
 
 ## Installation
