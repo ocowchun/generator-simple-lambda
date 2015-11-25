@@ -1,0 +1,5 @@
+#!/bin/sh
+cd tmp
+aws lambda update-function-code --function-name <%= functionName %> --zip-file fileb://<%= functionName %>.zip
+cd ..
+
