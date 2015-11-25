@@ -1,5 +1,6 @@
 #!/bin/sh
 babel src --out-dir lib
+rm -rf tmp
 mkdir tmp
 cp -a lib tmp/lib
 cp index.js tmp/index.js
