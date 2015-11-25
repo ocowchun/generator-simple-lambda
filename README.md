@@ -1,4 +1,5 @@
-# generator-simple-lambda [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
+# generator-simple-lambda
+ [![NPM version][npm-image]][npm-url]
 > Generate aws lambda function 
 
 ## Installation
