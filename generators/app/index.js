@@ -19,6 +19,11 @@ module.exports = yeoman.generators.Base.extend({
       default: this.appname
     }, {
       type: 'input',
+      name: 'description',
+      message: 'What\'s your project description?',
+      default: 'do some amazing things!'
+    }, {
+      type: 'input',
       name: 'functionName',
       message: 'What\'s your function name?',
       default: this.appname
@@ -68,26 +73,26 @@ module.exports = yeoman.generators.Base.extend({
       title: this.props.projectName
     });
 
-    copyTpl('script/create', {
-      functionName: this.props.functionName,
-      iamRole: this.props.iamRole
-    });
-
     copyTpl('package.json', {
       title: this.props.projectName,
       userName: this.props.userName,
-      email: this.props.email
+      email: this.props.email,
+      description: this.props.description
     });
 
-    var scriptProps = {
-      functionName: this.props.functionName
-    };
 
-    ['script/build', 'script/deploy', 'script/invoke'].forEach(function(file) {
-      copyTpl(file, scriptProps)
-    });
+    copyTpl('config.js', {
+      functionName: this.props.functionName,
+      iamRole: this.props.iamRole,
+      description: this.props.description
+    })
 
-    ['src/index.js', 'config.js', 'index.js', '.gitignore', '.babelrc'].forEach(function(file) {
+    this.fs.copy(
+      this.templatePath('_.gitignore'),
+      this.destinationPath('.gitignore')
+    );
+
+    ['src/index.js', 'index.js', 'aws.js', 'gulpfile.js', '.babelrc'].forEach(function(file) {
       copy(file);
     });
 

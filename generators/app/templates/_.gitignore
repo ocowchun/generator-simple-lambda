@@ -1,4 +1,4 @@
 node_modules
 config.js
 tmp
-script/create
+aws.js

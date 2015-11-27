@@ -1,21 +1,19 @@
 #<%= title %>
 
 
-##create function
+##create function(first time to deploy function)
 ```bash
-./script/build
-./script/create
+npm run create
 ```
 
 ##deploy function
 ```bash
-./script/build
-./script/deploy
+npm run deploy
 ```
 
 ##invoke function
 ```bash
-./script/invoke
+npm run invoke
 ```
 
 MIT
