@@ -14,7 +14,7 @@ npm install -g generator-simple-lambda
 Then generate your new project:
 
 ```bash
-yo generator-simple-lambda
+yo simple-lambda
 ```
 
 ## Getting To Know Yeoman
